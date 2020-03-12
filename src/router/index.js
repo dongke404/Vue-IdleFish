@@ -1,22 +1,50 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
-
+import Home from '../views/home/Home.vue'
+import Login from '../views/login/Login.vue'
+import Error404 from '../views/error/404.vue'
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home
+    redirect: '/showdata'
   },
   {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    path: '/home',
+    name: 'Home',
+    component: Home,
+    children: [
+      {
+        path: '/showdata',
+        name: 'Showdata',
+        component: () => import('../views/home/content/showdata/Showdata.vue'),
+        meta: { title: '置顶信息' },
+      },
+      {
+        path: '/add',
+        name: 'Add',
+        component: () => import('../views/home/content/add/Add.vue'),
+        meta: { title: '添加置顶' },
+      },
+      {
+        path: '/extend',
+        name: 'Extend',
+        component: () => import('../views/home/content/extend/Extend.vue'),
+        meta: { title: '扩展内容' },
+      },
+    ]
+  },
+  {
+    path: '/login',
+    name: 'Login',
+    component: Login
+  },
+
+  {
+    path: '*',
+    name: 'Error',
+    component: Error404
   }
 ]
 

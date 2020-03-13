@@ -145,10 +145,10 @@ export default {
         .catch(_ => {});
     },
     //点击修改
-    modifyRow(row) {
+    modifyRow(e) {
       this.dialogVisible = true;
       let userInfo = { ...e };
-      // console.log(userInfo);
+      console.log(userInfo);
       this.userInfo = userInfo;
     }
   }

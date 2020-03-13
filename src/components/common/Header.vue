@@ -34,7 +34,6 @@
             <i class="el-icon-caret-bottom"></i>
           </span>
           <el-dropdown-menu slot="dropdown">
-          
             <el-dropdown-item divided command="loginout">退出登录</el-dropdown-item>
           </el-dropdown-menu>
         </el-dropdown>
@@ -44,7 +43,7 @@
 </template>
 <script>
 import bus from "../../utils/bus";
-import {clearCookie} from "../../utils/index" 
+import { clearCookie } from "../../utils/index";
 export default {
   data() {
     return {

@@ -1,8 +1,6 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import Home from '../views/home/Home.vue'
-import Login from '../views/login/Login.vue'
-import Error404 from '../views/error/404.vue'
+// import Vue from 'vue'
+// import VueRouter from 'vue-router'
+
 Vue.use(VueRouter)
 
 const routes = [
@@ -13,7 +11,7 @@ const routes = [
   {
     path: '/home',
     name: 'Home',
-    component: Home,
+    component: () => import('../views/home/Home.vue'),
     children: [
       {
         path: '/showdata',
@@ -38,13 +36,13 @@ const routes = [
   {
     path: '/login',
     name: 'Login',
-    component: Login
+    component:() => import('../views/login/Login.vue'),
   },
 
   {
     path: '*',
     name: 'Error',
-    component: Error404
+    component:() => import( '../views/error/404.vue')
   }
 ]
 

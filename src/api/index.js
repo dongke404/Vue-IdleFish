@@ -15,3 +15,7 @@ export const reqData= () =>request(baseurl+'/query')
 export const modifyData= (params) =>request(baseurl+'/modify', {...params},'POST')
 //删除数据
 export const delData= (id) =>request(baseurl+'/delete', {id},'POST')
+//修改鱼塘首页文本
+export const modifyWx= (params) =>request(baseurl+'/addhomeInfo', {...params},'POST')
+//获取鱼塘首页文本
+export const getWx= () =>request(baseurl+'/gethomeInfo')

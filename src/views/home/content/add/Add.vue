@@ -53,6 +53,7 @@ import { formateDate, formateTime } from "../../../../utils";
 import { Message } from "element-ui";
 
 export default {
+  name: 'Add',
   data() {
     return {
       form: {

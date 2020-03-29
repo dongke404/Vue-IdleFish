@@ -38,6 +38,11 @@ export default {
           title: "添加置顶"
         },
         {
+          icon: "iconfont icon-xiugai",
+          index: "modifyWx",
+          title: "修改公告"
+        },
+        {
           icon: "iconfont icon-extend",
           index: "extend",
           title: "扩展内容"

@@ -8,10 +8,11 @@
         <el-table-column prop="ticketNo" label="订单号" width="120"></el-table-column>
         <el-table-column prop="name" label="闲鱼名"></el-table-column>
         <el-table-column prop="nickname" label="闲鱼昵称"></el-table-column>
-        <el-table-column prop="stime" label="开始时间" sortable :sort-method="sortstime"></el-table-column>
-        <el-table-column prop="etime" label="结束时间" sortable :sort-method="sortetime"></el-table-column>
-        <el-table-column prop="channel" label="支付方式" width="100"></el-table-column>
-        <el-table-column prop="money" label="金额"></el-table-column>
+        <el-table-column prop="wxname" label="微信号"></el-table-column>
+        <el-table-column prop="stime" label="开始时间"  width="150px" sortable :sort-method="sortstime"></el-table-column>
+        <el-table-column prop="etime" label="结束时间"  width="150px" sortable :sort-method="sortetime"></el-table-column>
+        <el-table-column prop="channel" label="支付方式" ></el-table-column>
+        <el-table-column prop="money" label="金额" width="50px"></el-table-column>
         <el-table-column prop="notes" label="备注"></el-table-column>
         <el-table-column prop="modify" label="修改">
           <template slot-scope="scope">
@@ -79,7 +80,7 @@ export default {
       }
     },
     deleteRow(index, row, rows) {
-      this.$confirm("此操作将永久删除该文件, 是否继续?", "提示", {
+      this.$confirm("此操作将永久删除, 是否继续?", "提示", {
         confirmButtonText: "确定",
         cancelButtonText: "取消",
         type: "warning"

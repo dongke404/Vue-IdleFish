@@ -2,7 +2,7 @@ import { Message } from 'element-ui';
 import axios from 'axios'
 
 axios.defaults.withCredentials=true
-export default function ajax(url, data={}, type='GET') {
+export default function request(url, data={}, type='GET') {
   return new Promise((resolve, reject) => {
     let promise
     // 1. 执行异步ajax请求

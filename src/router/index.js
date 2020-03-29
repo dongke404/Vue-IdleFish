@@ -23,7 +23,13 @@ const routes = [
         path: '/add',
         name: 'Add',
         component: () => import('../views/home/content/add/Add.vue'),
-        meta: { title: '添加置顶' },
+        meta: { title: '添加置顶', keepAlive: true},
+      },
+      {
+        path: '/modifywx',
+        name: 'Modifywx',
+        component: () => import('../views/home/content/modifyWX/ModifyWx.vue'),
+        meta: { title: '修改微信小程序信息' },
       },
       {
         path: '/extend',

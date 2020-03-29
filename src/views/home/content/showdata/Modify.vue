@@ -17,6 +17,9 @@
           <el-option label="支付宝" value="支付宝"></el-option>
         </el-select>
       </el-form-item>
+      <el-form-item label="金额">
+        <el-input v-model="userInfo.money"></el-input>
+      </el-form-item>
       <el-form-item label="开始时间">
         <el-input v-model="userInfo.stime"></el-input>
       </el-form-item>
